@@ -1,0 +1,33 @@
+h1,
+p,
+a,
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+/*HEADER*/
+
+#logo {
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+a {
+  color: black;
+}
+
+/*MAIN*/
+
+/*RECIPE PAGE*/
+
+.recipe-image {
+  width: 30%;
+}
