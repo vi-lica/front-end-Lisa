@@ -39,6 +39,11 @@ a {
   color: red;
 }
 
+/*media quaries HEADER*/
+
+@media screen and (max width: 639.2px) {
+}
+
 /*MAIN*/
 
 .main-img {
