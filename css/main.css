@@ -58,10 +58,20 @@ a {
   gao: 2rem;
 }
 
-figure {
-}
-
 .recipe-image {
   width: 100%;
   height: auto;
+}
+
+/*CITY-GUIDE PAGE*/
+
+.city-guide-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gao: 2rem;
+}
+
+.city-guide-image {
+  width: 100%;
+  height: auto%;
 }
