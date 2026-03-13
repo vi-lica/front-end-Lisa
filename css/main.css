@@ -10,24 +10,53 @@ h2 {
 
 /*HEADER*/
 
+header {
+  display: flex;
+  align-items: flex-end;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
 #logo {
   font-weight: 600;
-  font-size: 1.3rem;
+  font-size: 5rem;
+  color: red;
+  margin: 0;
+  padding-left: 2rem;
 }
 
 ul {
+  display: flex;
   list-style: none;
   padding-left: 0;
 }
 
+li {
+  margin-left: 10rem;
+}
+
 a {
-  color: black;
+  color: red;
 }
 
 /*MAIN*/
 
+.main-img {
+  width: 50%;
+}
+
 /*RECIPE PAGE*/
 
+.recipe-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gao: 2rem;
+}
+
+figure {
+}
+
 .recipe-image {
-  width: 30%;
+  width: 100%;
+  height: auto;
 }
