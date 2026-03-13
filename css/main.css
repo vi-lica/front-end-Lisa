@@ -50,12 +50,25 @@ a {
   width: 50%;
 }
 
+/*PRODUCTS*/
+
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+}
+
 /*RECIPE PAGE*/
 
 .recipe-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gao: 2rem;
+  gap: 2rem;
 }
 
 .recipe-image {
@@ -68,10 +81,12 @@ a {
 .city-guide-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gao: 2rem;
+  gap: 4rem;
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
 }
 
 .city-guide-image {
   width: 100%;
-  height: auto%;
+  height: auto;
 }
