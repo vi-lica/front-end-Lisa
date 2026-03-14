@@ -1,3 +1,8 @@
+/* REMOVES THE UNDERLINES FROM CLICKABLE TEXT */
+a {
+  text-decoration: none;
+}
+
 h1,
 p,
 a,
@@ -140,9 +145,9 @@ a {
 .city-guide-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 4rem;
-  padding-left: 2.4rem;
-  padding-right: 2.4rem;
+  gap: 1rem;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
 }
 
 .city-guide-image {
@@ -178,17 +183,50 @@ a {
 
 .product-page {
   display: flex;
+  grid-template-columns: 1fr;
   align-items: flex-start;
   gap: 3rem;
   margin-top: 3rem;
-  padding-left: 2.4rem;
+  padding: 0 2.4rem;
 }
 
 .product-image-dripper {
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   height: auto;
 }
 
 .product-info {
   max-width: 500px;
+}
+
+p {
+  color: gray;
+}
+
+h1 {
+  color: red;
+}
+
+.add-to-cart {
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.4rem;
+  border: none;
+  background: red;
+  color: white;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+.add-to-cart:hover {
+  background: darkred;
+}
+
+/* MEDIA QUERIES PRODUCT PAGE (COFFEE-DRIPPER) */
+
+@media screen and (max-width: 715px) {
+  .product-page {
+    flex-direction: column;
+  }
 }
