@@ -238,3 +238,48 @@ h1 {
     flex-direction: column;
   }
 }
+
+/*BLOG PAGE*/
+
+.blog-page {
+  display: flex;
+  grid-template-columns: repeat(1, 1fr);
+  flex-direction: column;
+  gap: 3rem;
+  margin-top: 3rem;
+  padding: 0 2.4rem;
+}
+
+.blog-post {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.blog-image {
+  width: 175px;
+  height: auto;
+}
+
+.blog-page figure {
+  margin: 0;
+}
+
+.image-info {
+  max-width: 400px;
+}
+
+/* MEDIA QUERIES for BLOG PAGE */
+
+@media screen and (max-width: 715px) {
+  .blog-post {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .blog-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+}
