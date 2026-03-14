@@ -39,9 +39,19 @@ a {
   color: red;
 }
 
-/*media quaries HEADER*/
+/*media queries HEADER*/
 
-@media screen and (max width: 639.2px) {
+@media screen and (max-width: 1400px) {
+  header,
+  ul {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  li {
+    margin-left: 2.4rem;
+    margin-bottom: 1rem;
+  }
 }
 
 /*MAIN*/
@@ -63,6 +73,35 @@ a {
   height: auto;
 }
 
+/*MEDIA QUERIES FOR PRODUCTS PAGE*/
+
+/* 3 columns */
+@media screen and (max-width: 1200px) {
+  .products-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+}
+
+/*2 columns */
+@media screen and (max-width: 842px) {
+  .products-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+}
+
+/* 1 column */
+@media screen and (max-width: 600px) {
+  .products-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 3rem;
+  }
+}
+
 /*RECIPE PAGE*/
 
 .recipe-container {
@@ -74,6 +113,26 @@ a {
 .recipe-image {
   width: 100%;
   height: auto;
+}
+
+/* MEDIA QUEIRIES FOR RECIPE PAGE */
+
+/* 2 columns */
+@media screen and (max-width: 1100px) {
+  .recipe-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+/* 1 column */
+@media screen and (max-width: 630px) {
+  .recipe-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
 }
 
 /*CITY-GUIDE PAGE*/
@@ -89,4 +148,28 @@ a {
 .city-guide-image {
   width: 100%;
   height: auto;
+}
+
+/* MEDIA QUERIES CITY-GUIDES PAGE */
+
+/* 2 columns */
+@media screen and (max-width: 900px) {
+  .city-guide-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+  }
+}
+
+/* 1 column */
+@media screen and (max-width: 550px) {
+  .city-guide-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 4rem;
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+  }
 }
