@@ -173,3 +173,22 @@ a {
     padding-right: 2.4rem;
   }
 }
+
+/* PRODUCT PAGE (COFFEE-DRIPPER) */
+
+.product-page {
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+  margin-top: 3rem;
+  padding-left: 2.4rem;
+}
+
+.product-image-dripper {
+  width: 500px;
+  height: auto;
+}
+
+.product-info {
+  max-width: 500px;
+}
