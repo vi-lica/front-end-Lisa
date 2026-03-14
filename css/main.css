@@ -59,11 +59,19 @@ a {
   }
 }
 
-/*MAIN*/
+/*INDEX PAGE*/
 
-.main-img {
-  width: 50%;
+.main-image {
+  width: 100%;
 }
+
+.main-image-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 3rem;
+}
+
+/*media queries index page*/
 
 /*PRODUCTS*/
 
