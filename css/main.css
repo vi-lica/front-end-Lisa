@@ -71,7 +71,26 @@ a {
   gap: 3rem;
 }
 
-/*media queries index page*/
+/*container for the text on the images*/
+.image-container {
+  display: grid;
+}
+
+.main-image {
+  width: 100%;
+  grid-area: 1 / 1;
+}
+
+/* text on top of images */
+.image-text {
+  grid-area: 1 / 1;
+  justify-self: center;
+  align-self: center;
+
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
 
 /*PRODUCTS*/
 
@@ -200,12 +219,12 @@ a {
 
 .product-image-dripper {
   width: 100%;
-  max-width: 500px;
+  max-width: 31.25rem;
   height: auto;
 }
 
 .product-info {
-  max-width: 500px;
+  max-width: 31.25rem;
 }
 
 p {
@@ -257,7 +276,7 @@ h1 {
 }
 
 .blog-image {
-  width: 175px;
+  width: 11rem;
   height: auto;
 }
 
