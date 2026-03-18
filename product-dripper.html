@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NORN</title>
+    <script src="js/main.js" defer></script>
     <link rel="stylesheet" href="css/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -29,7 +30,7 @@
         </ul>
       </nav>
     </header>
-
+    <!-- used the video on canvas as source for how to insert the image-->
     <main>
       <section class="product-page">
         <figure>
@@ -40,12 +41,21 @@
           />
         </figure>
 
+        <!-- source: https://www.w3schools.com/howto/howto_css_product_card.asp
+         -->
         <div class="product-info">
           <h1>ceramic coffee dripper</h1>
           <p>Handmade ceramic coffee dripper designed for pour-over brewing.</p>
           <p>$28</p>
 
-          <button class="add-to-cart">add to cart</button>
+          <button
+            class="add-to-cart"
+            data-name="ceramic coffee dripper"
+            data-price="$28"
+            data-image="img/ceramic-coffee-filter.jpg"
+          >
+            add to cart
+          </button>
         </div>
       </section>
     </main>

@@ -1,7 +1,8 @@
-/* REMOVES THE UNDERLINES FROM CLICKABLE TEXT */
-a {
-  text-decoration: none;
-}
+/* sources overall:
+used the videos on canvas,
+used https://www.w3schools.com/css/css3_object-fit.asp for image fits,
+used https://css-tricks.com/snippets/css/a-guide-to-flexbox/ for flexbox
+*/
 
 h1,
 p,
@@ -9,8 +10,14 @@ a,
 h2 {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
-  font-weight: weight;
   font-style: normal;
+}
+
+/* FOOTER */
+
+footer {
+  margin-left: 2.5rem;
+  margin-top: 2rem;
 }
 
 /*HEADER*/
@@ -22,6 +29,11 @@ header {
   padding-bottom: 2rem;
 }
 
+/* used a # as an id selector
+source: https://www.w3schools.com/CSS/css_selectors.asp?utm_source=chatgpt.com
+*/
+
+/* styling the header */
 #logo {
   font-weight: 600;
   font-size: 5rem;
@@ -41,6 +53,9 @@ li {
 }
 
 a {
+  /* REMOVES THE UNDERLINES FROM CLICKABLE TEXT */
+  /* source for removing underlines, https://stackoverflow.com/questions/25473788/how-to-remove-css-underline */
+  text-decoration: none;
   color: red;
 }
 
@@ -60,15 +75,17 @@ a {
 }
 
 /*INDEX PAGE*/
-
-.main-image {
+/* sources: 
+used https://css-tricks.com/complete-guide-css-grid-layout/ 
+to position text on images */
+.main-image-container {
   width: 100%;
 }
 
-.main-image-container {
+.main-page-image-container {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  gap: 3rem;
+  gap: 0.5rem;
 }
 
 /*container for the text on the images*/
@@ -131,6 +148,64 @@ a {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 3rem;
+  }
+}
+
+/* PRODUCT PAGE (COFFEE-DRIPPER) */
+
+.product-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 3rem;
+  padding: 0 2.4rem;
+}
+
+/* source:
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/padding
+explains the padding: 0 2.4rem 
+*/
+
+.product-image-dripper {
+  width: 100%;
+  height: auto;
+}
+
+.product-info {
+  max-width: 31.25rem;
+}
+
+p {
+  color: gray;
+}
+
+h1 {
+  color: red;
+}
+
+/* source: 
+used https://forum.ninox.com/t/60h4jqp/how-do-you-change-the-button-font-in-html
+to change font in button */
+.add-to-cart {
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.4rem;
+  border: none;
+  background: red;
+  color: white;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+.add-to-cart:hover {
+  background: darkred;
+}
+
+/* MEDIA QUERIES PRODUCT PAGE (COFFEE-DRIPPER) */
+
+@media screen and (max-width: 715px) {
+  .product-page {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -206,71 +281,19 @@ a {
   }
 }
 
-/* PRODUCT PAGE (COFFEE-DRIPPER) */
-
-.product-page {
-  display: flex;
-  grid-template-columns: 1fr;
-  align-items: flex-start;
-  gap: 3rem;
-  margin-top: 3rem;
-  padding: 0 2.4rem;
-}
-
-.product-image-dripper {
-  width: 100%;
-  max-width: 31.25rem;
-  height: auto;
-}
-
-.product-info {
-  max-width: 31.25rem;
-}
-
-p {
-  color: gray;
-}
-
-h1 {
-  color: red;
-}
-
-.add-to-cart {
-  margin-top: 1.5rem;
-  padding: 0.8rem 1.4rem;
-  border: none;
-  background: red;
-  color: white;
-  cursor: pointer;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-}
-
-.add-to-cart:hover {
-  background: darkred;
-}
-
-/* MEDIA QUERIES PRODUCT PAGE (COFFEE-DRIPPER) */
-
-@media screen and (max-width: 715px) {
-  .product-page {
-    flex-direction: column;
-  }
-}
-
 /*BLOG PAGE*/
 
 .blog-page {
-  display: flex;
+  display: grid;
   grid-template-columns: repeat(1, 1fr);
-  flex-direction: column;
   gap: 3rem;
   margin-top: 3rem;
   padding: 0 2.4rem;
 }
 
 .blog-post {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr;
   gap: 2rem;
   align-items: flex-start;
 }
@@ -292,13 +315,82 @@ h1 {
 
 @media screen and (max-width: 715px) {
   .blog-post {
-    flex-direction: column;
-    align-items: flex-start;
+    grid-template-columns: 1fr;
   }
 
   .blog-image {
     width: 100%;
     max-width: 300px;
     height: auto;
+  }
+}
+
+/* CART PAGE */
+
+.cart-page {
+  padding: 2rem;
+}
+
+/* page title */
+.cart-container {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* container holding all cart items */
+
+#cart-items {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+/* each product row */
+.cart-item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* product image */
+.cart-image {
+  width: 7.5rem;
+  height: auto;
+  margin-left: 0.2rem;
+  margin-top: 1.5rem;
+}
+
+/* product info */
+.cart-info {
+  display: grid;
+  gap: 0.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: grey;
+}
+
+/* remove from cart button */
+.remove-button {
+  background: red;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+
+  justify-self: end;
+}
+
+.remove-button:hover {
+  background: darkred;
+}
+
+/* MEDIA QUERIES cart page */
+
+@media (max-width: 600px) {
+  .cart-item {
+    grid-template-columns: 1fr;
   }
 }
